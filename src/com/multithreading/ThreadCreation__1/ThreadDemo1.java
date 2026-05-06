@@ -1,4 +1,4 @@
-package com.multithreading.oldPackage;
+package com.multithreading.ThreadCreation__1;
 
 public class ThreadDemo1 {
 

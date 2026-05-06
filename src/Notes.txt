@@ -15,7 +15,10 @@ A process is an instance of a program. When we open MSWord and then CPU create a
 
 
 ---What is a thread?
-A thread is basically a single independent execution unit within the process. When MSWord is opened, then a process is created and now you're writing something in the MSWord and there are three things happening at the same time. First, words are getting written, Second, Spell checker is also working side by side and third, auto saving is also happening. So, these single executions are take place and this is known as thread. In a process there are multiple thread and they are working / executing tasks simultaneously and also sharing the resources with themselves.
+A thread is basically a single independent execution unit within the process. When MSWord is opened, then a process is created and now you're writing something in the MSWord and there 
+are three things happening at the same time. First, words are getting written, Second, Spell checker is also working side by side and third, auto saving is also happening.
+So, these single executions are take place and this is known as thread. In a process there are multiple thread and they are working / executing tasks simultaneously and also sharing 
+the resources with themselves.
 
 
 ---What is multi-tasking? (multiple processes in a OS(core basically))
@@ -27,23 +30,26 @@ EX -- Browser for surfing, VLC for video play and MS word for writing is simulta
 
 ---What is multi-threading? (multiple threads in a single process)
 In an multi-tasking environment, multi-threading enhance the tasking capabilities by diving individual tasks into small sub tasks or threads and they are processed simultaneously.
-EX -- Browser is used for rendering the web page, multiple tabs opened, downloading is also running, so all these things done by the multiple threads in a single process that is in browser.
+Ex Browser is used for rendering the web page, multiple tabs opened, multiple files downloading, so all these things done by the multiple threads in a single process that is in browser.
 
 
 ---What is time Slicing?
 Dividing the CPU time into different time intervals or time slices or quanta by OS scheduler to make sure each process get executed concurrently.
 
+---What is context switching?
+Context switching is basically saving the state of a process and shifting the focus of the CPU/Core on other programs/process.
+In single core environment, context swtiching is of more significance. While, in multi core environment actuall parallel processing is achieved.
+
 
 ---What is multi-threading in Java?
-when a program is executing by 2 or more than two threads concurrently to maximize the utilization of the CPU. In java java.lang package provide the multi-threading functionality. in Java, OS and JVM both take part in parallel execution of the programs.
+when a program is executing by 2 or more than two threads concurrently to maximize the utilization of the CPU. In java java.lang package provide the multi-threading functionality.
+In Java, OS and JVM both take part in parallel execution of the programs.
 Class -- java.lang.Thread
 Interface -- java.lang.Runnable
 
 
-
 ---
 When the java program starts, 1 thread start running immediately and that is the main thread to run the main method of the java program
-
 
 
 ---- Thread life-cycle  (thread states)
@@ -56,7 +62,7 @@ New -> Runnable -> Running -> Blocked/waiting -> terminated
 --waiting : when a thread is waiting for another thread to complete it's execution or to get access to the resource
 --terminated : when it's execution is completed then thread got terminated
 
-
+-- Now, after that some notes will be there in the classes itself and some breif explanation will be given below.
 
 
 

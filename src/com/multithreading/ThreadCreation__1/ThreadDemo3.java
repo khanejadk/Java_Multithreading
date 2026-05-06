@@ -1,4 +1,4 @@
-package com.multithreading.oldPackage;
+package com.multithreading.ThreadCreation__1;
 
 public class ThreadDemo3 {
 
@@ -19,3 +19,9 @@ public class ThreadDemo3 {
 	}
 
 }
+
+/*
+
+Runnable object banakar thread instance ko pass kardo simple and then threadInstance.start();
+
+*/
