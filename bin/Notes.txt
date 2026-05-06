@@ -1,0 +1,66 @@
+---What is a CPU?
+CPU is the brain of the computer. All the programs that we write will be executed by the CPU. CPU has cores which do all the executions.
+
+
+---What is a core?
+Core is a single processing unit. There are multiple cores in a CPU which divide the tasks and execute all the things.
+
+
+---What is a Program?
+A program is basically a set of instructions. EX- MSWord is a high level program.
+
+
+---What is a process?
+A process is an instance of a program. When we open MSWord and then CPU create an instance of a program (that is the process)
+
+
+---What is a thread?
+A thread is basically a single independent execution unit within the process. When MSWord is opened, then a process is created and now you're writing something in the MSWord and there are three things happening at the same time. First, words are getting written, Second, Spell checker is also working side by side and third, auto saving is also happening. So, these single executions are take place and this is known as thread. In a process there are multiple thread and they are working / executing tasks simultaneously and also sharing the resources with themselves.
+
+
+---What is multi-tasking? (multiple processes in a OS(core basically))
+Multiple processes running by an Operating system is known as multitasking.
+In single core CPU environment, core actually do the time sharing thing to run the multiple processes.
+But in multiple core environment, true parallel processing done to run multiple processes with task distributed across cores.
+EX -- Browser for surfing, VLC for video play and MS word for writing is simultaneously running in an OS.
+
+
+---What is multi-threading? (multiple threads in a single process)
+In an multi-tasking environment, multi-threading enhance the tasking capabilities by diving individual tasks into small sub tasks or threads and they are processed simultaneously.
+EX -- Browser is used for rendering the web page, multiple tabs opened, downloading is also running, so all these things done by the multiple threads in a single process that is in browser.
+
+
+---What is time Slicing?
+Dividing the CPU time into different time intervals or time slices or quanta by OS scheduler to make sure each process get executed concurrently.
+
+
+---What is multi-threading in Java?
+when a program is executing by 2 or more than two threads concurrently to maximize the utilization of the CPU. In java java.lang package provide the multi-threading functionality. in Java, OS and JVM both take part in parallel execution of the programs.
+Class -- java.lang.Thread
+Interface -- java.lang.Runnable
+
+
+
+---
+When the java program starts, 1 thread start running immediately and that is the main thread to run the main method of the java program
+
+
+
+---- Thread life-cycle  (thread states)
+New -> Runnable -> Running -> Blocked/waiting -> terminated
+
+--New : when the thread (object) is created but not yet started
+--Runnable : start method has been called but it is waiting for CPU time allocation to get in execution stage
+--Running : when the CPU alloted time to thread, it started executing the program and it's in running state then
+		(there is no state as running in java, it's runnable only either it is executing or waiting for CPU time)
+--waiting : when a thread is waiting for another thread to complete it's execution or to get access to the resource
+--terminated : when it's execution is completed then thread got terminated
+
+
+
+
+
+
+
+
+
