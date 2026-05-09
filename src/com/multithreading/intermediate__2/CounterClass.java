@@ -18,7 +18,7 @@ public class CounterClass {
 	}
 	
 	// We can use synchronized keyword with methods and with blocks only.
-	public synchronized void increment_synchBlock() {
+	public void increment_synchBlock() {
 		
 		synchronized (this) { // if not with full method then we can just use the synchronized with on that particular part also, where actual data change is hapenning.
 			count++;
