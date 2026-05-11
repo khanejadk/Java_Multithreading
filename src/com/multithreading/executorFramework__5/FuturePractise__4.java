@@ -8,6 +8,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class FuturePractise__4 {
 
@@ -54,6 +55,20 @@ public class FuturePractise__4 {
 		
 		// there is one more invokeAll with different method signature as invokeAll(list of callables, timeout)
 		List<Future<Integer>> futuress = ex.invokeAll(callableList, 100, TimeUnit.MILLISECONDS);  // here it will wait till that time and return the result irrespective of all the tasks completed or not
+		
+		// invokeAny: It will start executing all the task and as soon as first task completed successfully, it will return that value and cancelled all the remaining tasks.
+
+		Integer result = ex.invokeAny(callableList); // here it will not return the Future but the direct datatype. Also, all the thread will start executing the task, as soon as first task gets completed, it will return that value irrespective of other threads and other tasks.
+		
+		try {
+			Integer result1 = ex.invokeAny(callableList, 100, TimeUnit.MILLISECONDS); // here same, give the first completed task, but that too if completed in given time, otherwise no result given.
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			e.printStackTrace();
+		} catch (TimeoutException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

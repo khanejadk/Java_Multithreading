@@ -75,7 +75,7 @@ class Producer implements Runnable{
 
 class Consumer implements Runnable {
 
-private SharedResource res;
+	private SharedResource res;
 	
 	public Consumer(SharedResource res) {
 		this.res = res;

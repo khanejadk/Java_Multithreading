@@ -18,14 +18,14 @@ public class ExecutorFramework__2 {
 			
 			int newI = i;
 			
-			executorSer.submit(() -> {    // submit takes the Runnable object like the Thread classß. So we passed the lambda expression over here.
+			executorSer.submit(() -> {    // submit takes the Runnable object like the Thread class. So we passed the lambda expression over here.
 				
 				long result = factorial(newI);
 				System.out.println(result);
 			});
 			
 		}
-		executorSer.shutdown(); // won't take any new task after that and in fact shutting down of threads will also start. All threads in the pool will start terminating.
+		executorSer.shutdown(); // won't take any new task after that and will try to complete already taken tasks and after that, all threads in the pool will start terminating.
 		  
 		// but using shutdown, it won't ensure that next print statement will execute after all the thread done their work. for that we need to use below:
 		

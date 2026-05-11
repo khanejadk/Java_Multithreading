@@ -15,6 +15,4 @@ public class ThreadClass extends Thread{
 			counter.increment(); // this will cause race condition because this operation done by both thread parallely and will result in data inconsistency
 		}
 	}
-	
-
 }
